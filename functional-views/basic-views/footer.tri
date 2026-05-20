@@ -1,0 +1,29 @@
+<footer>
+	<div class="container-wrapper">
+		<div class="container">
+			<div class="logo">
+				__'/img/logo.png'::makePicture__
+			</div>
+			<div class="menus">
+
+				<ul class="menu">
+					__menuTrees['footer-menu'].children::menu-link__
+				</ul>
+
+			</div>
+			<div class="contact">
+				<p>
+					<strong>Office</strong>
+					<br>
+					Street address
+					<br>
+					City, State Zip
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="copyright">
+		 __::currentYear__ All Rights Reserved.
+	</div>
+</footer>

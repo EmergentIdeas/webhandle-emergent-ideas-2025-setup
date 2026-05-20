@@ -1,0 +1,6 @@
+<div class="main-menu-block">
+	<h2>__label__</h2>
+	<ul class="main-menu">
+		__children::admin/main-menu-item__
+	</ul>
+</div>

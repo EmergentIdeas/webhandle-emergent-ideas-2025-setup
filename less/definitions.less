@@ -1,0 +1,60 @@
+
+.setup-width-definitions() {
+	@container-width:			1200px;
+	@tablet-width: 				900px;
+	@tablet-small-width:        716px;
+	@big-phone-width:			650px;
+	@phone-width:               550px;
+	@iphone-4-landscape-width:	480px;
+	@iphone-4-width: 			320px;
+	@page-side-padding: 			10px;
+	@outside-page-padding: 			58px;
+
+}
+
+.setup-width-definitions();
+
+
+/*
+ * The base font size which makes the chosen font match photoshop.
+ * For Open Sans this is 7.1pt, for Source Sans Pro this is 7.6pt 
+ */
+@base-font-size:			7.6pt;
+
+@grey-body-text:			#444444;
+
+
+.open-sans() {
+	font-family: "Open Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+}
+
+.menu-link() {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}	
+
+.link-inherit() {
+	a {
+		.menu-link();
+		font-size: inherit;
+		color: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+		font-family: inherit;
+	}
+}
+
+
+h1, h2, h3, h4, h5 {
+	.link-inherit();
+}
+
+body {
+	.open-sans();
+    color: @grey-body-text;
+}

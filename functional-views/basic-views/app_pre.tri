@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js __pageType__ __page.editor.disablePropertyEditor??'disable-property-editor'__ __page.editor.disablePageEditor??'disable-page-editor'__">
+<head>
+<meta charset="UTF-8">
+
+<title>__page.title__</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="description" content="__page.description__" />
+<meta name="viewport" content="width=device-width" />
+<meta name="built-by" content="Dan Kolz of Emergent Ideas" />
+<script>
+	var webpdetect = function() {
+		function addClass(className) {
+			document.getElementsByTagName('html')[0].classList.add(className)
+		}
+		function removeClass(className) {
+			document.getElementsByTagName('html')[0].classList.remove(className)
+		}
+		var img = new Image()
+		img.onload = function() { addClass('webp') }
+		img.onerror = function() { addClass('no-webp') }
+		img.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA='
+		
+		removeClass('no-js')
+	}
+	webpdetect()
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+
+__externalResourceManager.render()__
+
+
+
+__page::social-head-attributes__
+
+__recaptchaId::recaptcha-head__
+__page.pageVisibility === 'draft' || page.pageVisiblity === 'private'??'<meta name="robots" content="noindex" />'__
+__event && event.eventVisibility === 'draft'??'<meta name="robots" content="noindex" />'__
+
+
+
+</head>
+<body class="modern ready-to-load-img">
+	<div class="page page-inner page-app">
+		<section class="jumbo use-picture-as-background">
+			__page.headerImage::makePicture__
+			__::header__
+			<div class="msg container-werapper">
+				<div class="container edit-content-inline">
+					<h1>
+						__page.title__
+					</h1>
+				</div>
+			</div>
+		</section>
+		<div class="container-wrapper app-header-menu">
+			<div class="container ">
+				<ul class="menu">
+					<li>
+				<a href="/admin/menu-administrators">Menu</a>
+					</li>
+					<li>
+				<a href="/">Site</a>
+					</li>
+					<li>
+				<a href="/logout">Logout</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+		<main class="container-wrapper">
+			<div class="container">
+

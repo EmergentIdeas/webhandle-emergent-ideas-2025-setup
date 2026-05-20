@@ -1,0 +1,21 @@
+__::app_pre__
+<div>
+	<h1> Menu Set Editor</h1>
+	__::@webhandle/menu-set-editor/prepare__
+	<div id="menu-set-editor" style="height: 80vh">
+		
+		
+	</div>
+	<script type="module">
+		import { MenuSetEditor } from "@webhandle/menu-set-editor"
+		let mse = document.querySelector('#menu-set-editor')
+		let editor = new MenuSetEditor({
+			el: mse
+		})
+		editor.render()
+		
+	</script>
+</div>
+
+
+__::app_post__

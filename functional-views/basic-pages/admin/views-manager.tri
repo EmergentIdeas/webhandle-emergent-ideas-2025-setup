@@ -1,0 +1,40 @@
+__::app_pre__
+__::@webhandle/tree-file-browser/addExternalResources__
+<section class="page-page-manager">
+	<div class="webhandle-file-tree-image-browser">
+		
+	</div>
+</section>
+<script type="module">
+	import {siteEditorBridge} from "@webhandle/site-editor-bridge"
+	import { ImageBrowserView, FileSelectDialog } from '@webhandle/tree-file-browser'
+
+	let treeHolder = document.querySelector('.webhandle-file-tree-image-browser')
+	if (treeHolder) {
+		let imageBrowserView = new ImageBrowserView({
+			// The source of the files
+			sink: siteEditorBridge.resourceTypes.views
+			// optional, an panel to post events
+			// , eventNotificationPanel: eventPanel
+			// optional, the directory which to open to
+			// , startingDirectory: 'img/empty'
+			// true by default. Will load styles to show the file browser
+			, loadStyles: true
+			, imagesOnly: false
+		})
+		imageBrowserView.appendTo(treeHolder)
+		imageBrowserView.render()
+	}
+
+</script>
+<style>
+	#tree-page-properties-editor {
+		height: 70vh !important;
+
+	}
+
+	.container {
+		max-width: none;
+	}
+</style>
+__::app_post__

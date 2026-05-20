@@ -1,0 +1,6 @@
+__::app_pre__
+	<section class="page-main-menu">
+		<h1>Menu</h1>
+		__menuTrees.admin.children::admin/main-menu-block__
+	</section>
+__::app_post__

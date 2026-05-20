@@ -1,0 +1,10 @@
+<meta property="og:title" content="__this.facebookTitle || this.title || $globals.page.title__">
+<meta property="og:description" content="__this.facebookDescription || this.description || $globals.page.description || $globals.page.title__">
+<meta property="og:image" content="__this.facebookImage || this.image__">
+<meta property="og:url" content="__$globals.pageInfo.reqURL__">
+
+<meta name="twitter:title" content="__this.twitterTitle || this.title || $globals.page.title__">
+<meta name="twitter:description" content="__this.twitterDescription || this.description || $globals.page.description || $globals.page.title__">
+<meta name="twitter:image" content="__this.twitterImage || this.image__">
+<meta name="twitter:card" content="summary_large_image">
+

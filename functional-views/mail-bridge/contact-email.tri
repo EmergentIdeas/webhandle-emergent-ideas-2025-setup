@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		
+		<p>
+			Name: __name__
+		</p>
+		<p>
+			Email: __email__
+		</p>
+		<p>
+			Phone: __phone__
+		</p>
+		<p>
+			Message: __message__
+		</p>
+	</body>
+</html>

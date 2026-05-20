@@ -1,0 +1,130 @@
+{
+	"menus": [
+		{
+			"name": "primary",
+			"nodes": [
+				{
+					"id": 0,
+					"label": "main"
+				},
+				{
+					"id": "1002",
+					"label": "Home",
+					"url": "/",
+					"attributes": {},
+					"customClasses": "",
+					"image": "",
+					"parentId": 0
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"nodes": [
+				{
+					"id": 0,
+					"label": "admin"
+				},
+				{
+					"id": "1002",
+					"label": "Basics",
+					"parentId": 0,
+					"attributes": {},
+					"url": "",
+					"customClasses": "",
+					"image": ""
+				},
+				{
+					"id": "1004",
+					"label": "User Management",
+					"attributes": {},
+					"url": "/admin/users",
+					"customClasses": "",
+					"shortDescription": "Add, edit, and delete users",
+					"image": "",
+					"parentId": "1002"
+				},
+				{
+					"id": "1005",
+					"label": "Group Management",
+					"attributes": {},
+					"url": "/admin/groups",
+					"customClasses": "",
+					"shortDescription": "Add, edit, and delete groups",
+					"image": "",
+					"parentId": "1002"
+				},
+				{
+					"id": "1003",
+					"label": "Menu Editor",
+					"attributes": {},
+					"parentId": "1002",
+					"url": "/admin/menu-editor",
+					"customClasses": "",
+					"image": "",
+					"shortDescription": "Edit menu items."
+				},
+				{
+					"id": "1012",
+					"parentId": "1002",
+					"label": "Page Manager",
+					"attributes": {},
+					"url": "/admin/page-manager",
+					"customClasses": "",
+					"shortDescription": "Create, delete, and update the properties of pages",
+					"image": ""
+				},
+				{
+					"id": "1013",
+					"parentId": "1002",
+					"label": "Files Manager",
+					"attributes": {},
+					"url": "/admin/files-manager",
+					"customClasses": "",
+					"shortDescription": "Manage images, documents, and videos",
+					"image": ""
+				},
+				{
+					"id": "1014",
+					"label": "Data Editors",
+					"attributes": {},
+					"url": "",
+					"customClasses": "",
+					"shortDescription": "",
+					"image": "",
+					"parentId": 0
+				},
+				{
+					"id": "1011",
+					"label": "Advanced",
+					"attributes": {},
+					"url": "",
+					"customClasses": "",
+					"shortDescription": "",
+					"image": "",
+					"parentId": 0
+				},
+				{
+					"id": "1015",
+					"label": "Views Manager",
+					"attributes": {},
+					"url": "/admin/views-manager",
+					"customClasses": "",
+					"shortDescription": "Manage views that draw data",
+					"image": "",
+					"parentId": "1011"
+				},
+				{
+					"id": "1008",
+					"label": "Special Operations",
+					"attributes": {},
+					"url": "/admin/special-operations",
+					"customClasses": "",
+					"shortDescription": "Step into the danger zone",
+					"image": "",
+					"parentId": "1011"
+				}
+			]
+		}
+	]
+}

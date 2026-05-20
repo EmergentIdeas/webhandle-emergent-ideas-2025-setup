@@ -1,0 +1,23 @@
+__::start__
+<div class="page page-inner">
+	<section class="jumbo use-picture-as-background">
+		__page.headerImage::makePicture__
+		__::header__
+		<div class="msg container-werapper">
+			<div class="container edit-content-inline">
+				<h1>
+					Login
+				</h1>
+			</div>
+		</div>
+	</section>
+	<main>
+		<div class="container-wrapper">
+			<div class="container">
+				__::@webhandle/login/login-form__
+			</div>
+		</div>
+	</main>
+	__::footer__
+</div>
+__::end__

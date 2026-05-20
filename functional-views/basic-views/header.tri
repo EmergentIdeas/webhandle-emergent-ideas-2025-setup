@@ -1,0 +1,22 @@
+<header>
+	<a href="/" class="logo">
+		__'/img/logo.png'::makePicture__
+		Site Name
+	</a>
+	<nav >
+		<ul class="menu">
+			__menuTrees.primary.children::@webhandle/menu-loader/menu-item-with-subgroup-li-ul__
+		</ul>
+	</nav>
+	__::@webhandle/menu-loader/tribar__
+</header>
+<div class="mobile-menu">
+	<div class="mobile-menu-content">
+		<a href="#" class="close">&times;</a>
+		<nav >
+			<ul class="menu">
+				__menuTrees.primary.children::menu-link__
+			</ul>
+		</nav>
+	</div>
+</div>
