@@ -41,15 +41,17 @@ async function runCommand(command) {
 	return p
 }
 
-async function loadPackageFile() {
+async function loadPackageFile(createOnFail = true) {
 	hasPackageFile = false
 	try {
 		packageInfo = JSON.parse(await fs.readFile(path.join(info.projectDir, 'package.json')))
 		hasPackageFile = true
-		return info
 	}
 	catch (e) {
-		console.error(e)
+		if(createOnFail) {
+			await runCommand('npm init -y')
+			await loadPackageFile(false)
+		}
 	}
 }
 async function savePackageFile() {
@@ -110,11 +112,13 @@ async function mkdir(dir) {
 async function install(pkg) {
 	let com = `npm i ${pkg}`
 	await runCommand(com)
+	await loadPackageFile()
 }
 
 async function installDev(pkg) {
 	let com = `npm i --save-dev ${pkg}`
-	console.log(await runCommand(com))
+	await runCommand(com)
+	await loadPackageFile()
 }
 
 async function modConfigFile(filename, modifier) {
