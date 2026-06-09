@@ -2,15 +2,7 @@ __::app_pre__
 	<section class="page-main-menu">
 		<h1>Special Operations</h1>
 		
-		<h2>Add JSON Data</h2>
-		<form method="post" action="/admin/add-json-data">
-			<button type="submit">Add JSON Data</button>	
-		</form>
-
-		<h2>Modify Listing Primary Images</h2>
-		<form method="post" action="/admin/modify-listing-primary-images">
-			<button type="submit">Modify Images</button>	
-		</form>
+		<p>None at this time.</p>
 
 	</section>
 __::app_post__
