@@ -196,9 +196,9 @@ if(info.useLess) {
 	await cpFromInstallToProject('less/*', 'less')
 	await mkdir('public/css')
 	await installDev('less less-plugin-clean-css')
-	let cmd = "npx lessc --source-map --source-map-include-source less/pages.less public/css/pages.css; npx lessc --source-map --source-map-include-source less/app.less public/css/app.css; "
-	cmd += 'npx lessc --clean-css="--s1 --advanced --compatibility=ie8" less/pages.less public/css/pages.min.css; '
-	cmd += 'npx lessc --clean-css="--s1 --advanced --compatibility=ie8" less/app.less public/css/app.min.css; '
+	let cmd = "npx lessc --source-map --source-map-include-source less/pages.less public/css/pages.css && npx lessc --source-map --source-map-include-source less/app.less public/css/app.css && "
+	cmd += 'npx lessc --clean-css="--s1 --advanced --compatibility=ie8" less/pages.less public/css/pages.min.css && '
+	cmd += 'npx lessc --clean-css="--s1 --advanced --compatibility=ie8" less/app.less public/css/app.min.css '
 	buildLessCommand = cmd
     packageInfo.scripts["less-build"] = cmd
 	await savePackageFile()
@@ -455,6 +455,8 @@ result = await inquirer.prompt([
 Object.assign(info, result)
 if(info.createPM2Scripts) {
 	await installDev('onchange')
+	await cpFromInstallToProject('js-secondary/run-command.mjs', 'run-command.mjs')
+	
 let devConfig = `
 let appName = '${info.projectName}'
 
@@ -463,22 +465,20 @@ module.exports = {
 		{
 			name: appName + '-dev-web',
 			script: './server.mjs',
-			node_args: ['--inspect'],
+			node_args: ['--inspect', '--watch'],
 			"env": {
 				webhandleConfigFile: 'conf/dev.json'
 			}
 		},
 		{
 			"name": appName + '-js-compile',
-			"script": "npx webpack-cli --watch --config client-js.webpack.cjs",
-		}
-		, {
-			"name": appName + '-dev-less-compile'
-			, "script": "npx onchange 'less/**/*.less' -- npm run less-build"
-		}
-		, {
-			"name": appName + '-dev-server-reload'
-			, "script": "npx onchange 'server-js/**/*.mjs' -- pm2 reload " + appName + "-dev-web"
+			"script": "./run-command.mjs",
+			"args": ['npx webpack-cli --watch --config client-js.webpack.cjs']
+		},
+		{
+			"name": appName + '-less-compile',
+			"script": "./run-command.mjs",
+			"args": ["npx onchange 'less/**/*.less' -- npm run less-build"]
 		}
 	]
 };
